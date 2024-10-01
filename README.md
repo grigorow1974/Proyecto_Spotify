@@ -1,5 +1,8 @@
 # Análisis de Canciones Populares en Spotify - 2023
 
+## Autor
+Proyecto desarrollado por **Sergio Grigorow**
+
 ## Descripción del Proyecto
 Este proyecto de análisis de datos explora un conjunto de canciones populares de Spotify, con información adicional sobre la presencia de estas canciones en otras plataformas de música (Apple Music, Deezer, Shazam) y varios atributos musicales como la energía, la acústica, la bailabilidad, entre otros. El objetivo principal es explorar patrones en funciones de audio para comprender tendencias y preferencias en canciones populares.
 
@@ -56,9 +59,11 @@ A lo largo del análisis se generaron varias visualizaciones clave, incluyendo:
 
 1. **Gráficos de Caja**: Comparaciones de los atributos musicales clave como BPM, energía, acústica, etc.
 2. **Matriz de Correlación**: Visualización de la relación entre las variables cuantitativas (bailabilidad, energía, etc.) y las reproducciones.
-3. **Gráficos de Dispersión por Artista**: Comparación de reproducciones y atributos musicales para artistas con más de 5 canciones en el dataset.
-4. **Gráfico de Barras - Top Artistas por Reproducciones Totales**: Visualización de los 10 artistas más reproducidos.
-5. **Análisis Temporal**: Gráficos de línea que muestran las reproducciones de los principales artistas a lo largo del tiempo.
+![Matriz_Correlacion](Images/Matriz_Correlacion.png)
+4. **Gráficos de Dispersión**: Correlacion entre las diferentes caracteristicas musicales.
+![Diagrama de Dispersion](Images/Dispersion.png)
+6. **Gráfico de Barras - Top Artistas por Reproducciones Totales**: Visualización de los 10 artistas más reproducidos.
+7. **Análisis Temporal**: Gráficos de línea que muestran la evolucion de las caracteristicas musicales en el tiempo.
 
 
 ## Instrucciones de Uso
