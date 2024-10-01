@@ -22,7 +22,7 @@ El proyecto también incluye un enfoque particular en la artista Taylor Swift, a
    - **Liveness**: La baja media (18.2%) y mediana (12%) de liveness indican que la mayoría de las canciones populares no tienen una fuerte sensación de interpretación en vivo. Esto sugiere una preferencia por producciones de estudio pulidas.
    - **Speechiness**: Con una media de 10.1% y una mediana de 6%, la mayoría de las canciones tienen niveles bajos de speechiness. Esto indica que, aunque las voces son importantes, las canciones populares tienden a favorecer el canto sobre el habla o rap.
 
-![Texto alternativo](/images/boxplot.png)
+![Gráfico 1: Distribución de datos de Caracteristicas Musicales](Images/Boxplot.png)
 
 ### 2. Evolucion de Caracteristicas Musicales en el tiempo:
    - **BPM**: El BPM (beats per minute) ha mostrado una tendencia a disminuir ligeramente a lo largo de los años, aunque con mucha fluctuación. Sin embargo, en general, se observa una tendencia hacia canciones con un ritmo ligeramente más lento.
@@ -34,13 +34,13 @@ El proyecto también incluye un enfoque particular en la artista Taylor Swift, a
    - **Liveness**:La liveness ha mostrado una tendencia a disminuir ligeramente, lo que podría indicar que las grabaciones se han vuelto más controladas y menos "en vivo".
    - **Speechiness**: La speechiness ha aumentado ligeramente a lo largo de los años, lo que sugiere que las canciones ahora contienen más elementos hablados o rapeados.
 
-![Texto alternativo](/images/evolution.png)
+![Gráfico 2: Evolucion de Caracteristicas Musicales](Images/Evolution.png)
    
 ### 3. **Análisis por Artista**
    - El análisis de artistas muestra que aquellos con más de 5 canciones en el conjunto de datos tienden a dominar las listas de reproducciones. Entre ellos, **Bad Bunny**, **Taylor Swift** ,**The Weekend** y **Ed Sheeran** se destacan por el volumen de reproducciones acumuladas.
    - **Taylor Swift** fue la artista con mayor número de reproducciones, destacando consistentemente a lo largo del año en múltiples plataformas.
 
-![Texto alternativo](/images/Artistas.png)
+![Gráfico 2: Principales Artistas](Images/Artistas.png)
 
 ### 4. **Taylor Swift vs. Promedio General**
 En comparación con el promedio de otros artistas en cuanto a caracteristicas musicales, las canciones de Taylor Swift tienden a:
@@ -49,7 +49,7 @@ En comparación con el promedio de otros artistas en cuanto a caracteristicas mu
    - **Valence**: La valencia, que mide la positividad de una canción, es ligeramente más baja en las canciones de Taylor Swift. Esto sugiere que, en promedio, sus canciones transmiten emociones ligeramente menos positivas en comparación con otros artistas, lo que podría estar relacionado con temáticas más introspectivas o melancólicas que aborda en sus letras..
    - **Energy**: La energía de las canciones de Taylor Swift es notablemente menor que el promedio. Esto refuerza la idea de que sus canciones tienden a ser más relajadas y menos enérgicas
 
-![Texto alternativo](/images/Taylor vs otros.png)
+![Gráfico 4: Comparativo Taylor Swift](Images/Taylor_vs_otros.png)
  
 ## Visualizaciones Principales
 A lo largo del análisis se generaron varias visualizaciones clave, incluyendo:
