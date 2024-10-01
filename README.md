@@ -1,89 +1,67 @@
-# Data Science Project Boilerplate
+# Análisis de Canciones Populares en Spotify - 2023
 
-This boilerplate is designed to kickstart data science projects by providing a basic setup for database connections, data processing, and machine learning model development. It includes a structured folder organization for your datasets and a set of pre-defined Python packages necessary for most data science tasks.
+## Descripción del Proyecto
+Este proyecto de análisis de datos explora un conjunto de canciones populares de Spotify, con información adicional sobre la presencia de estas canciones en otras plataformas de música (Apple Music, Deezer, Shazam) y varios atributos musicales como la energía, la acústica, la bailabilidad, entre otros. El objetivo principal es explorar patrones en funciones de audio para comprender tendencias y preferencias en canciones populares.
 
-## Structure
+El proyecto también incluye un enfoque particular en la artista Taylor Swift, artista mas popular de la actualidad, comparando su éxito con el promedio de otros artistas y analizando los factores que podrían explicar su popularidad.
 
-The project is organized as follows:
+## Herramientas Utilizadas
+- **Python**: Lenguaje principal de programación.
+- **Pandas**: Para manipulación y análisis de datos.
+- **Seaborn & Matplotlib**: Para la visualización de datos.
+- **Jupyter Notebooks**: Para la ejecución interactiva del análisis.
 
-- `app.py` - The main Python script that you run for your project.
-- `explore.py` - A notebook to explore data, play around, visualize, clean, etc. Ideally the notebook code should be migrated to the app.py when moving to production.
-- `utils.py` - This file contains utility code for operations like database connections.
-- `requirements.txt` - This file contains the list of necessary python packages.
-- `models/` - This directory should contain your SQLAlchemy model classes.
-- `data/` - This directory contains the following subdirectories:
-  - `interin/` - For intermediate data that has been transformed.
-  - `processed/` - For the final data to be used for modeling.
-  - `raw/` - For raw data without any processing.
+## Conclusiones Principales
+### 1. **Análisis General de las Canciones**
+   - **BPM**: La media 122 BPM indica que el tempo promedio de las canciones más populares es de 122 beats por minuto. Este tempo se considera moderadamente rápido y es típico de muchos géneros de música pop, dance, y rock contemporáneo. Sin embargo, el amplio rango intercuartílico (41 BPM) sugiere que hay una gran variedad en los tempos de las canciones populares. Esto indica que no hay un único tempo "mágico" que garantice el éxito, sino que las canciones populares abarcan desde ritmos más lentos hasta muy rápidos
+   - **Bailabilidad**: Con una media de 67% y una mediana de 69%, la mayoría de las canciones son altamente bailables. El rango intercuartílico de 57% a 78% sugiere que la bailabilidad es una característica consistente en las canciones populares
+   - **Valence**: La valencia media de 51.4% indica un equilibrio entre canciones percibidas como positivas y negativas. La amplia desviación estándar de 23.5% sugiere gran variedad en el "estado de ánimo" de las canciones populares.
+   - **Energia**: Con una media de 64.3% y una mediana de 66%, las canciones tienden a ser energéticas. El rango intercuartílico de 53% a 77% indica que la mayoría de las canciones populares mantienen niveles de energía de moderados a altos.
+   - **Acústica**: La baja media (27.1%) y mediana (18%) de acústica sugieren una preferencia por producciones más electrónicas
+   - **Instrumentalidad**: Con una mediana de 0% y un tercer cuartil también en 0%, la gran mayoría de las canciones populares tienen poca o ninguna instrumentalidad. Esto sugiere una fuerte preferencia por canciones con voces prominentes
+   - **Liveness**: La baja media (18.2%) y mediana (12%) de liveness indican que la mayoría de las canciones populares no tienen una fuerte sensación de interpretación en vivo. Esto sugiere una preferencia por producciones de estudio pulidas.
+   - **Speechiness**: Con una media de 10.1% y una mediana de 6%, la mayoría de las canciones tienen niveles bajos de speechiness. Esto indica que, aunque las voces son importantes, las canciones populares tienden a favorecer el canto sobre el habla o rap.
+
+![Texto alternativo](/images/boxplot.png)
+
+### 2. Evolucion de Caracteristicas Musicales en el tiempo:
+   - **BPM**: El BPM (beats per minute) ha mostrado una tendencia a disminuir ligeramente a lo largo de los años, aunque con mucha fluctuación. Sin embargo, en general, se observa una tendencia hacia canciones con un ritmo ligeramente más lento.
+   - **Bailabilidad**: La bailabilidad ha experimentado un aumento gradual a lo largo del tiempo, lo que sugiere que las canciones se han vuelto más bailables en general.
+   - **Valence**: La valencia, que representa la positividad de una canción, ha mostrado una tendencia a disminuir ligeramente. Esto podría indicar que las canciones más recientes tienden a tener una tonalidad emocional menos positiv
+   - **Energia**: La energía de las canciones ha mostrado una tendencia similar a la danceability, con un aumento gradual a lo largo de los años. Esto sugiere que las canciones más recientes tienden a ser más enérgicas y menos relajadas.
+   - **Acústica**: La acousticness ha disminuido significativamente a lo largo del tiempo, lo que indica que las canciones se han vuelto menos acústicas y más producidas digitalmente
+   - **Instrumentalidad**: El instrumentalidad también ha disminuido, lo que sugiere que las canciones ahora contienen más elementos vocales y menos instrumentos en solitario. 
+   - **Liveness**:La liveness ha mostrado una tendencia a disminuir ligeramente, lo que podría indicar que las grabaciones se han vuelto más controladas y menos "en vivo".
+   - **Speechiness**: La speechiness ha aumentado ligeramente a lo largo de los años, lo que sugiere que las canciones ahora contienen más elementos hablados o rapeados.
+
+![Texto alternativo](/images/evolution.png)
+   
+### 3. **Análisis por Artista**
+   - El análisis de artistas muestra que aquellos con más de 5 canciones en el conjunto de datos tienden a dominar las listas de reproducciones. Entre ellos, **Bad Bunny**, **Taylor Swift** ,**The Weekend** y **Ed Sheeran** se destacan por el volumen de reproducciones acumuladas.
+   - **Taylor Swift** fue la artista con mayor número de reproducciones, destacando consistentemente a lo largo del año en múltiples plataformas.
+
+![Texto alternativo](/images/Artistas.png)
+
+### 4. **Taylor Swift vs. Promedio General**
+En comparación con el promedio de otros artistas en cuanto a caracteristicas musicales, las canciones de Taylor Swift tienden a:
+   - **BPM**: Tienden a tener un BPM (beats per minute) ligeramente más alto en comparación con el promedio de otros artistas. Esto sugiere que sus canciones, en general, tienen un ritmo más acelerado, sin ser tan marcada esta diferencia.
+   - **Bailabilidad**: La bailabilidad es ligeramente inferior al promedio. Esto indica que, aunque sus canciones son disfrutables, pueden no ser tan bailables como las de otros artistas, lo que podría estar relacionado con el ritmo más lento y posiblemente con un estilo musical más introspectivo.
+   - **Valence**: La valencia, que mide la positividad de una canción, es ligeramente más baja en las canciones de Taylor Swift. Esto sugiere que, en promedio, sus canciones transmiten emociones ligeramente menos positivas en comparación con otros artistas, lo que podría estar relacionado con temáticas más introspectivas o melancólicas que aborda en sus letras..
+   - **Energy**: La energía de las canciones de Taylor Swift es notablemente menor que el promedio. Esto refuerza la idea de que sus canciones tienden a ser más relajadas y menos enérgicas
+
+![Texto alternativo](/images/Taylor vs otros.png)
  
-    
-## Setup
+## Visualizaciones Principales
+A lo largo del análisis se generaron varias visualizaciones clave, incluyendo:
 
-**Prerequisites**
+1. **Gráficos de Caja**: Comparaciones de los atributos musicales clave como BPM, energía, acústica, etc.
+2. **Matriz de Correlación**: Visualización de la relación entre las variables cuantitativas (bailabilidad, energía, etc.) y las reproducciones.
+3. **Gráficos de Dispersión por Artista**: Comparación de reproducciones y atributos musicales para artistas con más de 5 canciones en el dataset.
+4. **Gráfico de Barras - Top Artistas por Reproducciones Totales**: Visualización de los 10 artistas más reproducidos.
+5. **Análisis Temporal**: Gráficos de línea que muestran las reproducciones de los principales artistas a lo largo del tiempo.
 
-Make sure you have Python 3.11+ installed on your. You will also need pip for installing the Python packages.
 
-**Installation**
-
-Clone the project repository to your local machine.
-
-Navigate to the project directory and install the required Python packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-**Create a database (if needed)**
-
-Create a new database within the Postgres engine by customizing and executing the following command: `$ createdb -h localhost -U <username> <db_name>`
-Connect to the Postgres engine to use your database, manipulate tables and data: `$ psql -h localhost -U <username> <db_name>`
-NOTE: Remember to check the ./.env file information to get the username and db_name.
-
-Once you are inside PSQL you will be able to create tables, make queries, insert, update or delete data and much more!
-
-**Environment Variables**
-
-Create a .env file in the project root directory to store your environment variables, such as your database connection string:
-
-```makefile
-DATABASE_URL="your_database_connection_url_here"
-```
-
-## Running the Application
-
-To run the application, execute the app.py script from the root of the project directory:
-
-```bash
-python app.py
-```
-
-## Adding Models
-
-To add SQLAlchemy model classes, create new Python script files inside the models/ directory. These classes should be defined according to your database schema.
-
-Example model definition (`models/example_model.py`):
-
-```py
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String
-
-Base = declarative_base()
-
-class ExampleModel(Base):
-    __tablename__ = 'example_table'
-    id = Column(Integer, primary_key=True)
-    name = Column(String)
-
-```
-
-## Working with Data
-
-You can place your raw datasets in the data/raw directory, intermediate datasets in data/interim, and the processed datasets ready for analysis in data/processed.
-
-To process data, you can modify the app.py script to include your data processing steps, utilizing pandas for data manipulation and analysis.
-
-## Contributors
-
-This template was built as part of the 4Geeks Academy [Data Science and Machine Learning Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about [4Geeks Academy's BootCamp programs](https://4geeksacademy.com/us/programs) here.
-
-Other templates and resources like this can be found on the school GitHub page.
+## Instrucciones de Uso
+1. Clona este repositorio:  
+   ```bash
+   git clone https://github.com/grigorow1974/Proyecto_Spotify.git
